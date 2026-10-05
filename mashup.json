@@ -3,6 +3,12 @@
   "version": "1.1.4",
   "name": "HyCraft",
   "tagline": "Join a Hytale world from Minecraft Java 1.21.11: walk, build, break, fight and trade items in Hytale's world with an unmodded Minecraft client.",
+  "how_to_play": [
+    "Play in a Hytale world as a Minecraft player: walk, build, break blocks, fight and use your inventory.",
+    "Start the Hytale server with HyCraft first (yours or a friend's), then press Play.",
+    "In Multiplayer pick \"HyCraft (Hytale server on this PC)\" or add your friend's server; a welcome message means it works.",
+    "Controls are plain Minecraft; Minecraft players show up in Hytale with a \".\" before their name."
+  ],
   "kind": "passthrough",
   "games": [
     {
