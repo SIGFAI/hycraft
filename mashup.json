@@ -112,12 +112,11 @@
   "status": "beta",
   "issues": "https://github.com/EdwardBelt/HyCraft/issues",
   "notes": [
-    "You need a Hytale server: one you run yourself (Hytale server files and Java 25) or a friend's that has HyCraft. Your Minecraft side is a plain Minecraft Java 1.21.11, no mods.",
-    "Hosting it yourself: copy the mods folder from this mod's hytale-server folder (Open folder in the app) into your Hytale server folder, so you get mods/HyCraft-1.1.4.jar, then start the server. HyCraft opens a Minecraft port 25565 (change it in mods/HyCraft/main.json).",
-    "Press Play: Minecraft 1.21.11 starts as the app's own Prism instance \"sigf-hycraft\" with \"HyCraft (Hytale server on this PC)\" (localhost:25565) in Multiplayer. For a friend's server, add its address there.",
-    "You sign in with your own Microsoft account: HyCraft checks Minecraft accounts with Mojang (online mode). Minecraft players show up in Hytale with a \".\" before their name.",
-    "Optional, for deeper hooks: the HyCraft-Mixins jar from the upstream release plus Hyxin in the server's earlyplugins/ folder (not packaged here).",
-    "Restore deletes the Minecraft instance and the plugin copy; take the jar out of your server's mods/ folder yourself.",
-    "Beta (the author calls it early development): features are incomplete, and a Hytale update can break it until HyCraft is updated. Report bugs to the author on the upstream issue tracker."
+    "How it works: you join a Hytale server with an unmodded Minecraft Java 1.21.11 and play in Hytale's world as a Minecraft player: walk, build, break blocks, fight and use your inventory.",
+    "To start: start the Hytale server with HyCraft first (yours or a friend's). Play then starts Minecraft 1.21.11; in Multiplayer pick \"HyCraft (Hytale server on this PC)\" (localhost:25565) or add your friend's server. A welcome message about a Minecraft client on a Hytale server means it works.",
+    "Controls are plain Minecraft. Minecraft players show up in Hytale with a \".\" before their name.",
+    "You need a Hytale server (one you run with Java 25, or a friend's with HyCraft) and a Microsoft account that owns Minecraft: Java Edition (sign-in is checked with Mojang). To host: copy the mods folder from this mod's hytale-server folder (Open folder in the app) into your server folder.",
+    "HyCraft listens on port 25565 (change it in the server's mods/HyCraft/main.json). Restore deletes the Minecraft side and the plugin copy; take the jar out of your server's mods/ folder yourself. A Hytale update can break it until HyCraft is updated.",
+    "Beta (the author calls it early development, features are incomplete): report bugs to the author with the Report a bug link."
   ]
 }
