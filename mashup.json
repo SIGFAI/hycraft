@@ -1,0 +1,123 @@
+{
+  "id": "sigf/hycraft",
+  "version": "1.1.4",
+  "name": "HyCraft",
+  "tagline": "Join a Hytale world from Minecraft Java 1.21.11: walk, build, break, fight and trade items in Hytale's world with an unmodded Minecraft client.",
+  "kind": "passthrough",
+  "games": [
+    {
+      "game": "hytale",
+      "role": "host",
+      "label": "Hytale (server)",
+      "engine": "Hytale server + HyCraft plugin (Java 25)",
+      "runtime": "Hytale server API 0.5.2 (built against); a Hytale update can break it"
+    },
+    {
+      "game": "minecraft",
+      "role": "guest",
+      "label": "Minecraft",
+      "engine": "Minecraft Java 1.21.11 (protocol 774), unmodded",
+      "mc": "1.21.11",
+      "java": "21"
+    }
+  ],
+  "requires": [
+    {
+      "id": "hytale-server",
+      "page": "https://hytale.com/",
+      "note": "a Hytale server you run (with Java 25) or can join; HyCraft goes into its mods/ folder and listens on port 25565"
+    },
+    {
+      "id": "minecraft-java",
+      "version": "1.21.11",
+      "page": "https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc",
+      "note": "a Microsoft account that owns Minecraft: Java Edition (HyCraft checks it with Mojang, online mode)"
+    }
+  ],
+  "install": [
+    {
+      "game": "hytale",
+      "strategy": "profile",
+      "loader": "hytale-plugin",
+      "files": [
+        {
+          "src": "hycraft-hytale-server.zip",
+          "dst": "{app}/hytale-server",
+          "unpack": true,
+          "contents": [
+            {
+              "path": "HyCraft-LICENSE.txt",
+              "sha256": "6cd78655be497e9332b9f2c75de2cabfdca107f6146ec7359aa434874a2a79ff"
+            },
+            {
+              "path": "mods/HyCraft-1.1.4.jar",
+              "sha256": "1cac5f1936766d92b732e35d240d3c9662788b0438127e483f49ffa7b2dc0a46"
+            }
+          ],
+          "url": "https://github.com/SIGFAI/hycraft/releases/download/v1.1.4/hycraft-hytale-server.zip",
+          "sha256": "96819d354834042cea2b2f665f579eee325134da377279fbdce8f77910f04bf4",
+          "size": 730481
+        }
+      ]
+    },
+    {
+      "game": "minecraft",
+      "strategy": "mrpack",
+      "pack": {
+        "src": "hycraft.mrpack",
+        "url": "https://github.com/SIGFAI/hycraft/releases/download/v1.1.4/hycraft.mrpack",
+        "sha256": "65ecd702567b3564470de8098b5b9a99e89a618bf16b84f63d29de4bd84fadf3",
+        "size": 1328
+      }
+    }
+  ],
+  "launch": [
+    {
+      "game": "minecraft"
+    }
+  ],
+  "files": [
+    {
+      "name": "hycraft-hytale-server.zip",
+      "url": "https://github.com/SIGFAI/hycraft/releases/download/v1.1.4/hycraft-hytale-server.zip",
+      "sha256": "96819d354834042cea2b2f665f579eee325134da377279fbdce8f77910f04bf4",
+      "size": 730481
+    },
+    {
+      "name": "hycraft.mrpack",
+      "url": "https://github.com/SIGFAI/hycraft/releases/download/v1.1.4/hycraft.mrpack",
+      "sha256": "65ecd702567b3564470de8098b5b9a99e89a618bf16b84f63d29de4bd84fadf3",
+      "size": 1328
+    }
+  ],
+  "source": {
+    "repo": "https://github.com/EdwardBelt/HyCraft",
+    "license": "MIT",
+    "upstream_license": "MIT",
+    "tag": "v1.1.4",
+    "commit": "358bb700f9e4b7b2b5690ba661444dae714fc13e",
+    "hosted": "https://github.com/SIGFAI/hycraft"
+  },
+  "media": {},
+  "built_by": {
+    "author": "EdwardBelt",
+    "authors": [
+      "EdwardBelt",
+      "IconPippi"
+    ],
+    "packaged_by": "SIGF"
+  },
+  "idea_by": "EdwardBelt",
+  "built_at": "2026-10-05T00:00:00.000Z",
+  "status": "beta",
+  "issues": "https://github.com/EdwardBelt/HyCraft/issues",
+  "notes": [
+    "You need a Hytale server: one you run yourself (Hytale server files and Java 25) or a friend's that has HyCraft. Your Minecraft side is a plain Minecraft Java 1.21.11, no mods.",
+    "Hosting it yourself: copy the mods folder from this mod's hytale-server folder (Open folder in the app) into your Hytale server folder, so you get mods/HyCraft-1.1.4.jar, then start the server. HyCraft opens a Minecraft port 25565 (change it in mods/HyCraft/main.json).",
+    "Press Play: Minecraft 1.21.11 starts as the app's own Prism instance \"sigf-hycraft\" with \"HyCraft (Hytale server on this PC)\" (localhost:25565) in Multiplayer. For a friend's server, add its address there.",
+    "You sign in with your own Microsoft account: HyCraft checks Minecraft accounts with Mojang (online mode). Minecraft players show up in Hytale with a \".\" before their name.",
+    "Optional, for deeper hooks: the HyCraft-Mixins jar from the upstream release plus Hyxin in the server's earlyplugins/ folder (not packaged here).",
+    "Restore deletes the Minecraft instance and the plugin copy; take the jar out of your server's mods/ folder yourself.",
+    "Beta (the author calls it early development): features are incomplete, and a Hytale update can break it until HyCraft is updated. Report bugs to the author on the upstream issue tracker."
+  ]
+}
