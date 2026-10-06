@@ -121,6 +121,7 @@
   "notes": [
     "You need a Hytale server (one you run with Java 25, or a friend's with HyCraft) and a Microsoft account that owns Minecraft: Java Edition (sign-in is checked with Mojang). To host: copy the mods folder from this mod's hytale-server folder (Open folder in the app) into your server folder.",
     "HyCraft listens on port 25565 (change it in the server's mods/HyCraft/main.json). Restore deletes the Minecraft side and the plugin copy; take the jar out of your server's mods/ folder yourself. A Hytale update can break it until HyCraft is updated.",
-    "Beta (the author calls it early development, features are incomplete): report bugs to the author with the Report a bug link."
+    "Beta (the author calls it early development, features are incomplete): report bugs to the author with the Report a bug link.",
+    "Free SIGF Minecraft servers do not apply here: your Hytale server running HyCraft is the server Minecraft joins."
   ]
 }
